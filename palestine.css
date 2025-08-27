@@ -1,43 +1,45 @@
-    .product-image {
-      position: relative;
-      text-align: center;
-      margin-top: 50px;
-      max-width: 350px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.product-image {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .product-image img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+.product-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: #fff;
-      background: rgba(0,0,0,0.3);
-      border-radius: 50%;
-      padding: 10px 15px;
-      cursor: pointer;
-      user-select: none;
-    }
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
 
-    .arrow:hover {
-      background: rgba(0,0,0,0.6);
-    }
+.arrow:hover {
+  background: rgba(0,0,0,0.6);
+}
 
-    .arrow-left {
-      left: -50px;
-    }
+.arrow-left {
+  left: 10px;
+}
 
-    .arrow-right {
-      right: -50px;
-    }
-    .size-selector {
+.arrow-right {
+  right: 10px;
+}
+
+.size-selector {
   font-family: Arial, sans-serif;
 }
 
@@ -69,49 +71,130 @@
 }
 
 .quantity {
-      display: flex;
-      align-items: center;
-      border: 1px solid #ccc;
-      height: 40px;
-    }
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  height: 40px;
+}
 
-    .quantity button {
-      width: 40px;
-      height: 40px;
-      border: none;
-      background: #fff;
-      font-size: 18px;
-      cursor: pointer;
-    }
+.quantity button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
 
-    .quantity span {
-      width: 40px;
-      text-align: center;
-      font-size: 16px;
-    }
+.quantity span {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+}
 
-    .btn {
-      background: #1a1a1a;
-      color: white;
-      border: none;
-      padding: 12px;
-      margin-top: 2px;
-      text-align: center;
-      font-size: 14px;
-      cursor: pointer;
-      width: 568px;
-    }
+.btn {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 2px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  width: 568px;
+}
 
-    .btn:hover {
-      background: #333;
-    }
+.btn:hover {
+  background: #333;
+}
 
-    .container {
-        margin-top: 20px;
-      display: flex;
-      gap: 10px;
-    }
+.container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
 
-    .full-width {
-      width: 700px;
-    }
+.full-width {
+  width: 700px;
+}
+
+@media (max-width: 1024px) {
+  .arrow-left { left: 5px; }
+  .arrow-right { right: 5px; }
+  .product-image {
+    max-width: 300px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    padding: 6px 10px;
+
+  }
+  .arrow-left { left: 5px; }
+  .arrow-right { right: 5px; }
+  .size-btn {
+    padding: 6px 10px;
+    min-width: 70px;
+    font-size: 14px;
+  }
+
+  .quantity {
+    height: 30px;
+  }
+
+  .quantity button,
+  .quantity span {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .btn {
+    max-width: 350px;
+    font-size: 13px;
+    padding: 8px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .product-image {
+    max-width: 250px;
+    margin-top: 20px;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+    padding: 4px 8px;
+
+  }
+  .arrow-left { left: 2px; }
+  .arrow-right { right: 2px; }
+  .size-btn {
+    padding: 5px 8px;
+    min-width: 60px;
+    font-size: 12px;
+  }
+
+  .quantity {
+    height: 28px;
+  }
+
+  .quantity button,
+  .quantity span {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .btn {
+    max-width: 100%;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
