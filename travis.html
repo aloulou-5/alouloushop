@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Produit 1</title>
+  <link rel="stylesheet" href="travis.css">
+</head>
+<body>
+
+  <div class="product-image">
+    <span class="arrow arrow-left" id="prev">&#10094;</span>
+    <img id="mainImage" src="traviss.PNG" alt="Produit 1">
+    <span class="arrow arrow-right" id="next">&#10095;</span>
+  </div>
+  <h1>FC Barcelona X Travis Scott</h1>
+  <h4 class="price">149.000 DT</h4>
+  <div class="size-selector">
+  <p>SIZE: <span id="selectedSize">S</span></p>
+  <div class="sizes">
+    <button class="size-btn active">S</button>
+    <button class="size-btn">M</button>
+    <button class="size-btn">L</button>
+    <button class="size-btn">XL</button>
+    <button class="size-btn">2XL</button>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="quantity">
+      <button onclick="changeQty(-1)">-</button>
+      <span id="qty">1</span>
+      <button onclick="changeQty(1)">+</button>
+    </div>
+    <button class="btn">ADD TO CART</button>
+  </div>
+
+  <button class="btn full-width">BUY IT NOW</button>
+
+<script src="travis.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.main {
+    width: 350px;
+    height: 500px;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#check {
+    display: none;
+}
+
+
+.signup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    background: #1c1742;
+    transition: transform 0.8s ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.signup label {
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 40px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signup input {
+    width: 70%;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #e0dede;
+}
+
+.signup button {
+    width: 70%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background: #6a4fbf;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    border-radius: 10px; 
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
+    padding-top: 40px;
+    z-index: 1;
+}
+
+.login label {
+    color: #573b8a;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login input {
+    width: 70%;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #e0dede;
+}
+
+.login button {
+    width: 70%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background: #6a4fbf;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#check:checked ~ .login {
+    transform: translateY(500px); 
+    border-radius: 10px;
+    z-index: 0;
+}
+
+#check:checked ~ .signup {
+    transform: translateY(0); 
+    z-index: 3;
+}
+
+#check:not(:checked) ~ .signup {
+    transform: translateY(500px); 
+    z-index: 0;
+}
+
+#check:not(:checked) ~ .login {
+    transform: translateY(0); 
+    z-index: 3;
+}
+.btn {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 5px;
+    background: #6a4fbf;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
