@@ -781,12 +781,15 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
   }
 
   .navBar {
-    height: 60px;
-    padding: 0 10px;
+    height: 55px;
+    padding: 0 8px;
   }
 
   .navBar img {
-    width: 70px;
+    width: 60px;
+  }
+  .navBar ul {
+    gap: 5px;
   }
 
   .navBar button {
@@ -841,26 +844,27 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
   }
 
   .navBar {
-    height: 50px;
+    height: 45px;
     padding: 0 5px;
   }
 
   .navBar img {
-    width: 50px;
+    width: 40px;
   }
 
   .navBar ul {
-    gap: 5px;
+    gap: 3px;
+    font-size: 11px;
   }
 
   .navBar button {
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 5px 8px;
+    font-size: 11px;
   }
 
   .wrapper {
-    grid-template-columns: 1fr; 
-    gap: 6px;
+    grid-template-columns:repeat(2,1fr); 
+    gap: 5px;
   }
 
   .card {
