@@ -842,37 +842,67 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
 
   .navBar {
     display: flex;
-    
+    flex-wrap: nowrap;        /* tout reste sur une seule ligne */
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 6px;
+    height: 50px;             /* hauteur compacte */
+    gap: 4px;
+    overflow-x: auto;         /* permet le scroll horizontal si vraiment nécessaire */
   }
 
+  /* Logo */
   .navBar img {
-    height: 40px; 
-    width: 50px;
-    padding-right:1px;
+    height: 35px;
+    width: auto;
+    margin-right: 4px;
+    flex-shrink: 0;           /* ne rétrécit pas */
   }
 
+  /* Liste de navigation */
   .navBar ul {
-    gap: 2px;              
-    font-size: 8px;  
-  }
-  .navBar li {
-    padding: 2px 0;
-  }
-  .navBar input[type="text"]{
-    width: 80px;
-    font-size: 8px;       
-   
-  }
-  .navBar button {
-    font-size: 8px;       
-    margin-right:50px;
-    width:40px; 
-    gap:0;
-  }
-  .switch {
-    transform: scale(0.8);     
+    display: flex;
+    flex-wrap: nowrap;        /* une seule ligne */
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-shrink: 1;           /* peut réduire si besoin */
+    overflow: hidden;         /* masque le dépassement */
   }
 
+  .navBar li {
+    font-size: 10px;
+    padding: 2px 4px;
+    white-space: nowrap;      /* empêche le texte de se couper */
+  }
+
+  /* Boutons */
+  .navBar button {
+    font-size: 10px;
+    padding: 4px 6px;
+    margin: 0 2px;
+    flex-shrink: 0;
+  }
+
+  /* Input de recherche */
+  .navBar input[type="text"] {
+    width: 90px;              /* compact mais utilisable */
+    font-size: 10px;
+    padding: 2px 4px;
+    flex-shrink: 0;
+  }
+
+  /* Switch sombre / clair */
+  .switch {
+    transform: scale(0.8);
+    margin-left: 4px;
+    flex-shrink: 0;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(1.2em);
+  }
   .wrapper {
     grid-template-columns:repeat(2,1fr); 
     gap: 5px;
