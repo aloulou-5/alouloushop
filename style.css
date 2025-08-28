@@ -842,12 +842,13 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
 
   .navBar {
     display: flex;
-    align-items: center;
+    
   }
 
   .navBar img {
     height: 40px; 
     width: 50px;
+    padding-right:1px;
   }
 
   .navBar ul {
@@ -858,14 +859,15 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
     padding: 2px 0;
   }
   .navBar input[type="text"]{
-    width: 100px;
+    width: 80px;
     font-size: 8px;       
-    padding: 2px 3px; 
+   
   }
   .navBar button {
     font-size: 8px;       
-    padding: 2px 3px;  
-    width: 30px;  
+    margin-right:50px;
+    width:40px; 
+    gap:0;
   }
   .switch {
     transform: scale(0.8);     
