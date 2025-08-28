@@ -841,38 +841,29 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
 @media (max-width: 600px) {
 
   .navBar {
-    flex-direction: column;      
-    height: auto;          
-    padding: 10px;
-    align-items: center;      
+    height: 55px;          
+    padding: 0 10px;   
   }
 
   .navBar img {
-    width: 60px;
-    margin-bottom: 8px;
+    height: 40px; 
+    width: auto;
   }
 
   .navBar ul {
-    flex-direction: column;  
-    gap: 8px;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
+    gap: 8px;              
+    font-size: 13px;  
   }
   .navBar li {
     padding: 4px 0;
   }
   .navBar button {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 6px;
-    width: 100%;             
-    max-width: 200px;     
-    margin: 5px auto;   
+    padding: 6px 10px;    
+    font-size: 12px;
+    border-radius: 5px;
   }
   .switch {
-    margin-top: 8px;
-    transform: scale(0.9);      
+    transform: scale(0.8);     
   }
 
   .wrapper {
