@@ -846,8 +846,8 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
   }
 
   .navBar img {
-    height: 50px; 
-    width: auto;
+    height: 40px; 
+    width: 50px;
   }
 
   .navBar ul {
