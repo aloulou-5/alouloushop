@@ -841,8 +841,9 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
 @media (max-width: 600px) {
 
   .navBar {
-    height: 55px;          
-    padding: 0 10px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .navBar img {
@@ -852,15 +853,16 @@ background:black; color:white; border:none; padding:5px 10px; cursor:pointer; bo
 
   .navBar ul {
     gap: 8px;              
-    font-size: 13px;  
+    font-size: 10px;  
   }
   .navBar li {
     padding: 4px 0;
   }
+  .navBar input[type="text"],
   .navBar button {
-    padding: 6px 10px;    
-    font-size: 12px;
-    border-radius: 5px;
+    font-size: 10px;       
+    padding: 3px 6px;  
+    width: auto;  
   }
   .switch {
     transform: scale(0.8);     
