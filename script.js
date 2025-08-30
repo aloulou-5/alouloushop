@@ -125,3 +125,8 @@ document.getElementById("applyPromo").addEventListener("click", function()  {
   }
   loadCart();
 });
+
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+  document.querySelector(".hamburger").classList.toggle("active");
+}

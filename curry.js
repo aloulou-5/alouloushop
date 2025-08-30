@@ -38,9 +38,7 @@ function addToCartFromProduct() {
   let price = 300; 
   let qty = parseInt(document.getElementById("qty").textContent);
 
- 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 
   let existing = cart.find(item => item.name === productName);
   if (existing) {
@@ -49,11 +47,19 @@ function addToCartFromProduct() {
     cart.push({ name: productName, price: price, qty: qty });
   }
 
-
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  alert(`${qty} x ${productName} ajouté au panier !`);
+
+  document.getElementById("successMessage").textContent =
+    `${qty} x ${productName} ajouté au panier !`;
+  document.getElementById("successModal").style.display = "flex";
 }
+
+
+document.getElementById("closeModal").addEventListener("click", function () {
+  document.getElementById("successModal").style.display = "none";
+});
+
 
 
 document.querySelector(".btn").addEventListener("click", addToCartFromProduct);
