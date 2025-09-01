@@ -29,18 +29,18 @@ let qty = 1;
 let qtyDisplay = document.getElementById("qty");
 
 function changeQty(val) {
-  qty = Math.max(1, qty + val)
+  qty = Math.max(1, qty + val);
   qtyDisplay.textContent = qty;
 }
 
 function addToCartFromProduct() {
-  let productName = "Jersey Stephen Curry"; 
-  let price = 300; 
+  let productName = "Jersey Stephen Curry";
+  let price = 300;
   let qty = parseInt(document.getElementById("qty").textContent);
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  let existing = cart.find(item => item.name === productName);
+  let existing = cart.find((item) => item.name === productName);
   if (existing) {
     existing.qty += qty;
   } else {
@@ -49,17 +49,24 @@ function addToCartFromProduct() {
 
   localStorage.setItem("cart", JSON.stringify(cart));
 
-
-  document.getElementById("successMessage").textContent =
-    `${qty} x ${productName} ajouté au panier !`;
+  document.getElementById(
+    "successMessage"
+  ).textContent = `${qty} x ${productName} ajouté au panier !`;
   document.getElementById("successModal").style.display = "flex";
 }
-
 
 document.getElementById("closeModal").addEventListener("click", function () {
   document.getElementById("successModal").style.display = "none";
 });
 
-
-
 document.querySelector(".btn").addEventListener("click", addToCartFromProduct);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+});

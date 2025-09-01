@@ -9,28 +9,28 @@
   </head>
   <body>
     <div class="prt1">
-      <p>
-        Lorem ipsum, dolor sit amet consectetur 
-      </p>
+      <p>Lorem ipsum, dolor sit amet consectetur</p>
       <p class="intro-text">
         Welcome to our sports store, Discover our Best products!
       </p>
     </div>
+
+
 <nav class="navBar">
+  
   <img src="logo1.PNG" alt="logo" />
-
-
-  <div class="hamburger" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
 
   
   <ul class="nav-links">
     <li><input type="text" id="search" placeholder="Rechercher" /></li>
     <li>
+      <a href="inscrire.html" target="_blank">
+        <button class="insc">Log in</button>
+      </a>
+    </li>
+    <li><button class="panier">Cart 🛒</button></li>
+    <li>
+
       <label class="switch">
         <input id="checkbox" type="checkbox" />
         <span class="slider">
@@ -47,28 +47,33 @@
         </span>
       </label>
     </li>
-    <li>
-      <a href="inscrire.html" target="_blank"
-        ><button class="insc">Log in</button></a
-      >
-    </li>
-    <li><button class="panier">Cart 🛒</button></li>
   </ul>
+
+
+  <div class="nav-buttons">
+    <a href="inscrire.html" target="_blank">
+      <button class="insc">Log in</button>
+    </a>
+    <button class="panier">Cart 🛒</button>
+  </div>
+
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
 
 
-    <h2 class="ligne">Jersey</h2>
+<h2 class="ligne">Jersey</h2>
+<div id="jerseyWrapper"></div> 
 
-    <div class="wrapper" id="jerseyWrapper"></div>
 
+
+    
     <div class="cart-sidebar" id="cartSidebar">
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
+      <div style="display: flex; justify-content: space-between; align-items: center;">
         <h2>Votre Panier</h2>
         <button class="closeCart">❌</button>
       </div>
@@ -81,10 +86,14 @@
       </div>
       <button class="buy">BUY</button>
     </div>
-    <div class="sneakers">
-      <h2 class="ligne">Sneakers</h2>
-      <div class="wrapper" id="sneakersWrapper"></div>
-    </div>
+
+    <!-- Sneakers -->
+<div class="sneakers">
+  <h2 class="ligne">Sneakers</h2>
+  <div id="sneakersWrapper"></div> 
+</div>
+
+    <!-- About -->
     <section class="hero-text">
       <h2>ABOUT US</h2>
       <h1 class="animated-text">
@@ -98,6 +107,7 @@
       <button class="view-btn">VIEW ALL PRODUCTS</button>
     </section>
 
+    
     <footer class="footer">
       <div class="newsletter">
         <h3>NEWSLETTER</h3>
@@ -142,6 +152,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-social">
         <a href="https://www.facebook.com" target="_blank">
           <img src="fblogo.webp" alt="Facebook" />

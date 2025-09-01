@@ -2,22 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Produit 1</title>
+  <title>Produit </title>
   <link rel="stylesheet" href="jordan.css">
 </head>
 <body>
+<nav class="navBar">
+  
+  <img src="logo1.PNG" alt="logo" />
 
+  
+  <ul class="nav-links">
+    <li><input type="text" id="search" placeholder="Rechercher" /></li>
+    <li>
+      <a href="inscrire.html" target="_blank">
+        <button class="insc">Log in</button>
+      </a>
+    </li>
+    <li><button class="panier">Cart 🛒</button></li>
+    <li>
+
+      <label class="switch">
+        <input id="checkbox" type="checkbox" />
+        <span class="slider">
+          <div class="star star_1"></div>
+          <div class="star star_2"></div>
+          <div class="star star_3"></div>
+          <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+            <path
+              transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+              fill="#fff"
+              d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+            />
+          </svg>
+        </span>
+      </label>
+    </li>
+  </ul>
+
+
+  <div class="nav-buttons">
+    <a href="inscrire.html" target="_blank">
+      <button class="insc">Log in</button>
+    </a>
+    <button class="panier">Cart 🛒</button>
+  </div>
+
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
   <div class="product-image">
     <span class="arrow arrow-left" id="prev">&#10094;</span>
     <img id="mainImage" src="dior.webp" alt="Produit 1">
     <span class="arrow arrow-right" id="next">&#10095;</span>
   </div>
-  <h1>jordan 1  </h1>
-  <h4 class="price">150.000 DT</h4>
+  <h1>Nike Jordan 1  </h1>
+  <h4 class="price">220.000 DT</h4>
   <div class="size-selector">
   <p>SIZE: <span id="selectedSize">32</span></p>
   <div class="sizes">
-    <button class="size-btn active">S</button>
+    <button class="size-btn active">32</button>
     <button class="size-btn">34</button>
     <button class="size-btn">36</button>
     <button class="size-btn">38</button>
@@ -43,6 +90,77 @@
     <button id="closeModal">OK</button>
   </div>
 </div>
+<button onclick="window.location.href = 'index.html'" class="back-btn">⬅ Back</button>
+
+    <section class="hero-text">
+      <h2>ABOUT US</h2>
+      <h1 class="animated-text">
+        DISCOVER THE LATEST SNEAKERS,<br />
+        URBAN FASHION, AND EXCLUSIVE DROPS<br />
+        FROM TOP BRANDS LIKE NIKE, JORDAN.<br />
+        WE BRING YOU AUTHENTIC STYLE,<br />
+        LIMITED-EDITION RELEASES, AND<br />
+        NATIONWIDE DELIVERY WITH SECURE PAYMENTS.
+      </h1>
+      <button class="view-btn">VIEW ALL PRODUCTS</button>
+    </section>
+
+    <footer class="footer">
+      <div class="newsletter">
+        <h3>NEWSLETTER</h3>
+        <p>Sign up to our newsletter to receive exclusive offers.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="E-MAIL" />
+          <button>SUBSCRIBE</button>
+        </div>
+        <p class="privacy-text">
+          By signing up to our newsletter, you agree with our
+          <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Help & FAQ</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Delivery and Payment</h4>
+          <ul>
+            <li><a href="#">Shipping Cost</a></li>
+            <li><a href="#">Tracking Control</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Terms of Service</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Legal Notice</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="fblogo.webp" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="instagram-logo-gradient-transparent.webp" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+          <img src="fa3e01125aedc9aeaf667e2cfb165f6e.webp" alt="TikTok" />
+        </a>
+      </div>
+    </footer>
 <script src="jordan.js"></script>
 </body>
 </html>

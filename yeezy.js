@@ -1,4 +1,4 @@
-let images = ["yeezy1.webp", "yeezy.webp", "yeezy2.webp"];
+let images = ["yeezy.webp", "yeezy1.webp", "yeezy2.webp"];
 
 let current = 0;
 let mainImage = document.getElementById("mainImage");
@@ -26,7 +26,7 @@ buttons.forEach((btn) => {
 });
 
 let qty = 1;
-let qtyDisplay = document.getElementById("qty");
+const qtyDisplay = document.getElementById("qty");
 
 function changeQty(val) {
   qty = Math.max(1, qty + val)
@@ -34,7 +34,7 @@ function changeQty(val) {
 }
 
 function addToCartFromProduct() {
-  let productName = "Adidas YEEZY"; 
+  let productName = "ADIDAS YEEZY "; 
   let price = 150; 
   let qty = parseInt(document.getElementById("qty").textContent);
 
@@ -62,3 +62,15 @@ document.getElementById("closeModal").addEventListener("click", function () {
 
 
 document.querySelector(".btn").addEventListener("click", addToCartFromProduct);
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+});
